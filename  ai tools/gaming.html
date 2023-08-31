@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tools in One by Vishesh Sanghvi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            transition: background-color 0.3s;
+        }
+        /* Navigation Styles */
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #4ffdd2;
+        }
+        /* Main Styles */
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        /* Footer Styles */
+        
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* Search and Filter Styles */
+        
+        .search-filter {
+            margin-block-start: 10px;
+            text-align: center;
+        }
+        
+        #searchBar,
+        #filterSelect {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        /* Tool Styles */
+        
+        .tool {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        
+        .tool.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .tool {
+            /* ... Your existing tool styles ... */
+            transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+        }
+        
+        .tool:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        /* Additions for futuristic animations */
+        
+        .tool {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        /* Parallax effect */
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            /* Adjust the height as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>All Tools in One</h1>
+        <nav>
+            <ul>
+                <li><a href="code.html">Code</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="productivity.html">Productivity</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="image.html">Image</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="#assistant">Assistant</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="gaming.html">Gaming</a></li>
+            </ul>
+        </nav>
+        <div class="search-filter">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <select id="filterSelect">
+                <option value="all">All Categories</option>
+                <option value="code">Code</option>
+                <option value="video">Video</option>
+                <option value="writing">Writing</option>
+                <option value="productivity">Productivity</option>
+                <option value="design">Design</option>
+                <option value="image">Image</option>
+                <option value="audio">Audio</option>
+                <option value="assistant">Assistant</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="business">Business</option>
+                <option value="education">Education</option>
+                <option value="gaming">Gaming</option>
+            </select>
+        </div>
+    </header>

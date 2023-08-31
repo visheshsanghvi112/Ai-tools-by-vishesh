@@ -1,0 +1,317 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+/* Header Styles */
+
+header {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    transition: background-color 0.3s;
+}
+
+
+/* Navigation Styles */
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-inline-end: 20px;
+    position: relative;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: rgba(79, 253, 210, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+
+/* Main Styles */
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Search and Filter Styles */
+
+.search-filter {
+    margin-block-start: 10px;
+    text-align: center;
+}
+
+#searchBar,
+#filterSelect {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+
+/* Tool Styles */
+
+.tool {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+}
+
+.tool.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tool {
+    /* ... Your existing tool styles ... */
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+}
+
+.tool:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Additions for futuristic animations */
+
+.tool {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+
+/* Parallax effect */
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 400px;
+    /* Adjust the height as needed */
+}
+
+.animated-character {
+    position: relative;
+    perspective: 1000px;
+}
+
+.character {
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.character:hover {
+    transform: rotateY(45deg);
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    inline-size: 200px;
+    block-size: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front {
+    background-color: #4ffdd2;
+}
+
+.card-back {
+    background-color: #ff8a5c;
+    transform: rotateY(180deg);
+}
+
+nav a:hover::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+nav ul li {
+    margin-inline-end: 20px;
+    position: relative;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a {
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: rgba(79, 253, 210, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    /* Apply the blur effect */
+    z-index: -1;
+    /* Place it behind the text */
+    transition: opacity 0.3s;
+    /* Add opacity transition */
+}
+
+nav a:hover::before {
+    opacity: 1;
+    /* Make the background visible on hover */
+}
+
+.logo {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* Additional styling ... (same as before) */
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.free-link {
+    color: #66ccff;
+    text-decoration: none;
+    font-weight: bold;
+}
